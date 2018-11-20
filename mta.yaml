@@ -1,0 +1,29 @@
+ID: fsmta
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: fsmtadb
+   type: hdb
+   path: fsmtadb
+   requires:
+    - name: hdi_fsmtadb
+
+
+ - name: fsmtajs
+   type: nodejs
+   path: fsmtajs
+   provides:
+    - name: fsmtajs_api
+      properties:
+         url: ${default-url}
+
+resources:
+ - name: hdi_fsmtadb
+   parameters:
+      config:
+         schema: FS_MTA_DB
+         database_id: 4b6b548e-ba53-41d6-8702-1969c0d2cde2
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
