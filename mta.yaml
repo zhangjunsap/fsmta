@@ -23,7 +23,7 @@ resources:
    parameters:
       config:
          schema: FS_MTA_DB
-         database_id: de1bcd25-f2c9-4b95-89f1-e54519a7b3f0
+         database_id: f65d655c-1778-468b-9944-8b5086c6cf1e
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
